@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="com.core.dao.UserDao">
+    <!-- sql标签的id要与映射接口的方法名对应  -->
+   <select id="findUser"  parameterType="String" resultType="com.core.pojo.User">
+      
+      select * from sys_user
+      where user_code=#{usercode}
+      and user_password=#{password}
+     
+   </select>
+
+</mapper>

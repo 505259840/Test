@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.core.dao.BaseDictDao">
+
+ <!-- sql标签的id要与映射接口的方法名对应  -->
+  <select id="selectBaseDictByTypeCode" parameterType="String" resultType="baseDict">
+       select * from base_dict where dict_type_code = #{type}
+  </select>
+</mapper>
